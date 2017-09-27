@@ -1,0 +1,16 @@
+.btn {
+    cursor: pointer;
+    user-select: none;
+    backface-visibility: hidden;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    touch-action: manipulation;
+}
+
+.btn-default {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
