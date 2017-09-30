@@ -28,6 +28,7 @@ const minifycss        = require('gulp-cssnano');
 
 // Configs
 const jsEntries = [
+    `${NODE_MODULE_PATH}/tiny-slider/dist/tiny-slider.js`,
     `${NODE_MODULE_PATH}/float-labels.js/dist/float-labels.min.js`,
     `${SRCJAVASCRIPTS}/init.js`
 ];

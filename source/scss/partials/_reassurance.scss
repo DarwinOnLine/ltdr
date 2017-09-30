@@ -1,0 +1,23 @@
+.reassurance {
+    text-align: center;
+    padding: 1rem 15%;
+    img {
+        width: 2.8rem;
+        height: 3rem;
+    }
+    h3 {
+        font-family: $headings-font-family;
+        font-size: $font-size-lg;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    p {
+        font-size: $font-size-sm;
+        max-width: 15rem;
+        margin: 0 auto;
+    }
+}
+
+.reassurance-slider {
+
+}

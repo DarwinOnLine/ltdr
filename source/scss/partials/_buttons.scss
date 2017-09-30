@@ -22,7 +22,7 @@
 
 .btn-default {
     border-color: $border-color;
-    transition: border-color .3s;
+    transition: border-color .3s, color .3s;
     z-index: 1;
     position: relative;
     overflow: hidden;
@@ -30,11 +30,18 @@
     &:hover,
     &:focus {
         text-decoration: none;
-        border-color: transparent;
+        border-color: $brand-primary;
+        color: $brand-primary;
     }
 }
 
 .btn-gold {
+    transition: border-color .3s, background-color .3s;
     background-color: $brand-primary;
     border-color: $brand-primary;
+    &:hover,
+    &:focus {
+        background-color: $brand-primary-hover;
+        border-color: $brand-primary-hover;
+    }
 }

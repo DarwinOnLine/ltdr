@@ -22,4 +22,17 @@
     .btn-wrap {
         margin-top: 4rem;
     }
+    nav {
+        a {
+            color: $body-color-alt;
+            font-size: $font-size-sm;
+            font-weight: bold;
+            &:hover,
+            &:focus,
+            &.active {
+                color: $brand-primary;
+                text-decoration: underline;
+            }
+        }
+    }
 }
