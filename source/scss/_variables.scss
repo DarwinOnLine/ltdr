@@ -8,6 +8,8 @@ $green:                   #317d31;
 
 $valid:                   $green;
 
+$brand-primary:           $gold;
+
 // Animations
 $wrapperduration:         2s;
 $wrapperdelay:            0s;
@@ -18,10 +20,12 @@ $elmtdelaystep:           .5s;
 // Body
 $body-bg:                 $white;
 $body-color:              $grey;
+$body-color-alt:          $white;
 // Components
 $border-color:            $white;
 // Fonts
 $font-family-sans-serif:  'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-lg:            2.5rem;
 $font-size-base:          1.5rem;
 $font-size-sm:            1.2rem;
 $font-weight-base:        400;
@@ -36,6 +40,6 @@ $headings-line-height:    1.1;
 $headings-color:          $body-color;
 $small-font-size:         80%;
 // Buttons
-$btn-padding-x:           2.5rem;
-$btn-padding-y:           1rem;
-$btn-font-weight:         300;
+$btn-padding-x:           4rem;
+$btn-padding-y:           2rem;
+$btn-font-weight:         400;

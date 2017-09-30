@@ -6,11 +6,35 @@
     vertical-align: middle;
     white-space: nowrap;
     touch-action: manipulation;
+    text-transform: uppercase;
+    font-size: $font-size-base;
+    font-weight: $btn-font-weight;
+    display: inline-block;
+    padding: $btn-padding-y $btn-padding-x;
+    color: $body-color-alt;
+    border-width: 1px;
+    border-style: solid;
+
+    + .btn {
+        margin-left: 2rem;
+    }
 }
 
 .btn-default {
+    border-color: $border-color;
+    transition: border-color .3s;
     z-index: 1;
     position: relative;
     overflow: hidden;
     background-color: transparent;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        border-color: transparent;
+    }
+}
+
+.btn-gold {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
 }
