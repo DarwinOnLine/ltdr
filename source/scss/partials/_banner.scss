@@ -9,11 +9,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
     h2 {
         color: $body-color-alt;
         margin-bottom: 0;
@@ -23,6 +18,21 @@
         margin-top: 4rem;
     }
     nav {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        li {
+            line-height: $font-size-sm;
+            &:not(:first-child)::before {
+                content: '';
+                width: 2px;
+                height: 1rem;
+                display: inline-block;
+                margin-left: .8rem;
+                margin-right: .8rem;
+                background-color: $body-color-alt;
+            }
+        }
         a {
             color: $body-color-alt;
             font-size: $font-size-sm;

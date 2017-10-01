@@ -119,3 +119,35 @@ nav {
     font-weight: bold;
 }
 
+.full {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.half {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 5%;
+    &.half--image {
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
+    header {
+        width: 100%;
+        text-align: center;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        img {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
