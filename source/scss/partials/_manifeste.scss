@@ -1,11 +1,21 @@
 .manifeste {
-    .half {
-        
-    }
     p {
         font-size: $font-size-sm;
         strong {
             font-size: 1.4rem;
         }
+        &:last-of-type {
+            strong {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    footer {
+        align-self: flex-end;
+        padding-top: 1.5rem;
+        border-top: 1px solid $border-color-alt;
+    }
+    .btn-wrap {
+        margin-top: 3rem;
     }
 }

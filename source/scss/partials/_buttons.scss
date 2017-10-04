@@ -35,6 +35,12 @@
     }
 }
 
+.btn-default-reverse {
+    border-color: $border-color-alt;
+    color: $body-color;
+}
+
+
 .btn-gold {
     transition: border-color .3s, background-color .3s;
     background-color: $brand-primary;

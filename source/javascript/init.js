@@ -1,4 +1,4 @@
-/* global FloatLabels tns */
+/* global FloatLabels tns tabby */
 (function() {
     "use strict";
 
@@ -20,7 +20,11 @@
             }
         }
     })
-    
+
+    tabby.init({
+        toggleActiveClass: 'checked'
+    });
+
     window.onorientationchange = function() {
         document.body.scrollTop = 0;
     };
@@ -30,6 +34,6 @@
     };
 
     window.onload = function() {
-        
+        document.documentElement.classList.remove('no-js');
     };
 })();

@@ -1,0 +1,77 @@
+.temps {
+    position: relative;
+    padding: 1rem 10%;
+    text-align: center;
+    background-color: $body-bg-alt;
+    background-image: url(../images/temps-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    header {
+        img {
+            margin: .4rem auto 1.3rem;
+        }
+    }
+    nav {
+        ul {
+            flex-wrap: nowrap;
+        }
+        li {
+            margin-left: 4rem;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        .check {
+            z-index: 5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 25px;
+            height: 25px;
+            transition: border .25s linear;
+            background-color: $body-bg;
+            border-radius: 100%;
+            &::before {
+                display: block;
+                position: absolute;
+                content: '';
+                border-radius: 100%;
+                height: 15px;
+                width: 15px;
+                top: 5px;
+                left: 5px;
+                margin: auto;
+                transition: background 0.25s linear;
+            }
+        }
+        a {
+            position: relative;
+            padding-left: 3rem;
+            display: block;
+            span {
+                color: $brand-primary;
+            }
+            &:hover,
+            &.checked {
+                .check {
+                    &::before {
+                        background: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tabs-wrapper {
+    padding-left: 25rem;
+}
+
+.tab-content {
+    text-align: left;
+    display: none;
+    &.active {
+        display: block;
+    }
+}

@@ -111,6 +111,10 @@ nav {
         display: flex;
         flex-wrap: wrap;
         text-transform: uppercase;
+        padding: 0;
+    }
+    li {
+        text-align: left;
     }
 }
 
@@ -130,6 +134,7 @@ nav {
     flex-wrap: wrap;
     width: 50%;
     padding: 5%;
+    flex-direction: column;
     &.half--image {
         padding: 0;
         background-repeat: no-repeat;
