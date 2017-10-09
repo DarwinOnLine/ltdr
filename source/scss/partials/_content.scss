@@ -11,10 +11,10 @@ html {
 body {
     font-family: $font-family-sans-serif;
     font-size: $font-size-base;
-    color: $body-color;
-    background-color: $body-bg;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: $body-color;
+    background-color: $body-bg;
 }
 
 a {
@@ -29,18 +29,15 @@ a {
 h1 {
     font-size: $h1-font-size;
     letter-spacing: -.035em;
-    //@media screen and (max-width: 768px) {
-    //    font-size: 3.6rem;
-    //}
 }
 
 h2 {
     font-size: $h2-font-size;
     margin-bottom: 2.7vw;
     text-transform: uppercase;
-    //@media screen and (max-width: 768px) {
-    //    font-size: 1.6rem;
-    //}
+    @media screen and (max-width: 767px) {
+        font-size: 3.1rem;
+    }
 }
 
 h3 {
@@ -110,36 +107,51 @@ nav {
     ul {
         display: flex;
         flex-wrap: wrap;
-        text-transform: uppercase;
         padding: 0;
+        text-transform: uppercase;
     }
     li {
         text-align: left;
+    }
+    @media screen and (max-width: 767px) {
+        ul {
+            flex-direction: column;
+        }
+        li {
+            padding-bottom: 1rem;
+        }
     }
 }
 
 .lead {
     font-size: $font-size-lg;
-    font-weight: bold;
+    @media screen and (max-width: 767px) {
+        font-size: 1.7rem;
+    }
 }
 
 .full {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    min-height: 100%;
 }
 
 .half {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
+    min-height: 36rem;
     padding: 5%;
-    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 50%;
+    }
     &.half--image {
         padding: 0;
         background-repeat: no-repeat;
+        background-position: center top;
         background-size: cover;
-        background-position: center bottom;
     }
     header {
         width: 100%;
@@ -154,5 +166,3 @@ nav {
         }
     }
 }
-
-

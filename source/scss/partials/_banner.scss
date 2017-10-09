@@ -5,43 +5,74 @@
     justify-content: center;
     align-items: center;
     min-height: 85vh;
+    text-align: center;
     color: $body-color-alt;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    @media screen and (max-width: 767px) {
+        padding: 20% 5%;
+        min-height: 1px;
+    }
     h2 {
-        color: $body-color-alt;
-        margin-bottom: 0;
         margin-top: 0;
+        margin-bottom: 0;
+        color: $body-color-alt;
     }
     .btn-wrap {
         margin-top: 4rem;
     }
     nav {
         position: absolute;
-        top: 0;
-        right: 5%;
+        top: 1rem;
+        left: 1rem;
         li {
             line-height: $font-size-sm;
-            &:not(:first-child)::before {
-                content: '';
-                width: 2px;
-                height: 1rem;
-                display: inline-block;
-                margin-left: .8rem;
-                margin-right: .8rem;
-                background-color: $body-color-alt;
-            }
         }
         a {
-            color: $body-color-alt;
             font-size: $font-size-sm;
             font-weight: bold;
+            display: inline-block;
+            color: $body-color-alt;
+            &::before {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                content: '';
+                border-radius: 50%;
+                background-color: $brand-primary;
+            }
+            span {
+                display: inline-block;
+                text-indent: -9999px;
+            }
             &:hover,
             &:focus,
             &.active {
-                color: $brand-primary;
                 text-decoration: underline;
+                color: $brand-primary;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            nav {
+                top: 0;
+                right: 5%;
+            }
+            li {
+                &:not(:first-child)::before {
+                    width: 2px;
+                    height: 1rem;
+                    margin-right: .8rem;
+                    margin-left: .8rem;
+                    background-color: $body-color-alt;
+                }
+            }
+            a {
+                &::before {
+                    content: none;
+                }
+                span {
+                    text-indent: 0;
+                }
             }
         }
     }
