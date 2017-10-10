@@ -1,12 +1,14 @@
 .temps {
     position: relative;
-    padding: 1rem 10% 3.5rem;
+    padding: 1rem 5% 3.5rem;
     text-align: center;
     background-color: $body-bg-alt;
     @media screen and (min-width: 768px) {
         background-image: url(../images/temps-bg.png);
         background-repeat: no-repeat;
-        background-position: bottom left;       
+        background-position: bottom left;     
+        padding-left: 10%;
+        padding-right: 10%;  
     }
     header {
         img {
@@ -36,6 +38,16 @@
                 left: 5px;
                 margin: auto;
                 transition: background 0.25s linear;
+            }
+            @media screen and (max-width: 767px) {
+                width: 19px;
+                height: 19px;
+                &::before {
+                    height: 12px;
+                    width: 12px;
+                    top: 4px;
+                    left: 4px;
+                }
             }
         }
         a {

@@ -1,26 +1,39 @@
+.btn-wrap {
+    display: flex;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
 .btn {
     cursor: pointer;
     user-select: none;
     backface-visibility: hidden;
     text-align: center;
     vertical-align: middle;
-    white-space: nowrap;
     touch-action: manipulation;
     text-transform: uppercase;
     font-size: $font-size-base;
     font-weight: $btn-font-weight;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: $btn-padding-y $btn-padding-x;
     color: $body-color-alt;
     border-width: 1px;
     border-style: solid;
+    max-width: calc(50% - 1rem);
 
     + .btn {
         margin-left: 2rem;
     }
     @media screen and (max-width: 767px) {
         font-size: 1.1rem;
-        padding: 1.3rem 1.1rem;
+        padding: 1.3rem .7rem;
+        max-width: calc(50% - .5rem);
+        + .btn {
+            margin-left: 1rem;
+        }
     }
 
 }
@@ -45,6 +58,33 @@
     color: $body-color;
 }
 
+.btn-arrow {
+    position: relative;
+    padding-left: 6rem;
+    svg {
+        position: absolute;
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 11px;
+        margin-right: .7rem;
+        left: 3rem;
+        fill: $body-color;
+        transition: fill .3s;
+    }
+    &:hover,
+    &:focus {
+        svg {
+            fill: $brand-primary;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding-left: 3rem;
+        svg {
+            left: 1rem;
+        }
+    }
+}
 
 .btn-gold {
     transition: border-color .3s, background-color .3s;

@@ -1,15 +1,24 @@
 .cafe {
     background-color: $body-color;
-    background-image: url('../images/cafe.jpg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    min-height: 620px;
     color: $body-bg;
     display: flex;
+    .full {
+        flex-direction: column-reverse;
+    }
+    @media screen and (min-width: 768px) {
+        background-image: url('../images/cafe.jpg');
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        min-height: 620px;  
+        .full {
+            flex-direction: row;
+        }
+    }
     .half {
         &:first-child {
             justify-content: flex-end;
             padding-bottom: 10px;
+            min-height: 1px;
         }
         &:last-child {
             header {
@@ -25,6 +34,8 @@
     nav {
         ul {
             text-transform: none;
+        }
+        li {
             font-size: 1.1rem;
         }
         a {
