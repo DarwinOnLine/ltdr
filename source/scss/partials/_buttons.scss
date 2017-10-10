@@ -1,9 +1,8 @@
 .btn-wrap {
     display: flex;
-    @media screen and (max-width: 767px) {
-        text-align: center;
-        justify-content: center;
-    }
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
 .btn {
