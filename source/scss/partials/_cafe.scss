@@ -31,6 +31,9 @@
             }
         }
     }
+    .btn {
+        max-width: none;
+    }
     nav {
         ul {
             text-transform: none;
@@ -40,6 +43,27 @@
         }
         a {
             color: $body-bg;
+        }
+        img {
+            max-width: 1.6rem;
+            max-height: 1.6rem;
+        }
+    }
+    .social {
+        a {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $body-bg;
+            border-radius: 50%;
+            margin-right: .5rem;
+            transition: background-color .3s;
+            &:hover,
+            &:focus {
+                background-color: $brand-primary;
+            }
         }
     }
 }

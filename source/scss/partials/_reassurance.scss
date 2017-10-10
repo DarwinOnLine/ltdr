@@ -23,6 +23,14 @@
 .reassurance-slider {
     > div {
         display: inline-block;
+        @media screen and (min-width: 768px) {
+            margin-left: 2%;
+            margin-right: 2%;   
+        }
+        @media screen and (min-width: 991px) {
+            margin-left: 5%;
+            margin-right: 5%;   
+        }
     }
 }
 
